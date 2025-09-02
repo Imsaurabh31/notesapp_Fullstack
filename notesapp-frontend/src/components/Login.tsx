@@ -58,12 +58,20 @@ const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
       <div className="auth-card">
         <h2>Login</h2>
         
-        <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID || ''}>
-          <GoogleLogin
-            onSuccess={handleGoogleSuccess}
-            onError={() => setErrors(['Google authentication failed'])}
-          />
-        </GoogleOAuthProvider>
+        {import.meta.env.VITE_GOOGLE_CLIENT_ID ? (
+          <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={() => setErrors(['Google authentication failed'])}
+            />
+          </GoogleOAuthProvider>
+        ) : (
+          <div className="google-oauth-placeholder">
+            <button type="button" disabled className="auth-button">
+              Google Sign In (Configure Client ID)
+            </button>
+          </div>
+        )}
 
         <div className="divider">OR</div>
 
