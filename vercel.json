@@ -1,18 +1,10 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "cd notesapp-frontend && npm run build",
+  "outputDirectory": "notesapp-frontend/dist",
+  "rewrites": [
     {
-      "src": "notesapp-frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "notesapp-frontend/dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "notesapp-frontend/dist/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
