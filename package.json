@@ -1,0 +1,35 @@
+{
+  "name": "notesapp-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack note-taking application with React TypeScript frontend and Node.js TypeScript backend",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd notesapp-backend && npm install",
+    "install-frontend": "cd notesapp-frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "dev-backend": "cd notesapp-backend && npm run dev",
+    "dev-frontend": "cd notesapp-frontend && npm run dev",
+    "build-backend": "cd notesapp-backend && npm run build",
+    "build-frontend": "cd notesapp-frontend && npm run build",
+    "build-all": "npm run build-backend && npm run build-frontend",
+    "start-backend": "cd notesapp-backend && npm start",
+    "start-frontend": "cd notesapp-frontend && npm run preview"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "nodejs",
+    "express",
+    "mongodb",
+    "jwt",
+    "oauth",
+    "notes",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
