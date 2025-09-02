@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd notesapp-frontend && npm run build",
-  "outputDirectory": "notesapp-frontend/dist",
   "rewrites": [
     {
       "source": "/(.*)",
