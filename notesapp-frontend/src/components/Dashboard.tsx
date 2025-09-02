@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { notesAPI } from '../utils/api';
-import { Note, User } from '../types';
+import type { Note, User } from '../types';
 
 const Dashboard: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
